@@ -1,0 +1,109 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main container to hold the layout */
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px; /* Space between the sidebar and graph */
+    max-width: 1200px; /* Max width for the whole content */
+    width: 100%;
+    padding: 20px;
+}
+
+/* Sidebar (left area) */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    width: 250px; /* Fixed width for the sidebar */
+}
+
+/* Graph container (center area) */
+.graph-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Allow the graph to grow and take available space */
+    min-width: 0; /* Prevent flex shrink from collapsing it */
+    max-width: 600px; /* Increase max-width to allow more space for the graph */
+}
+
+/* Style for the Cytoscape graph div */
+#cy {
+    width: 100%; /* Ensure it uses the full width of its container */
+    height: 500px; /* Keep the height consistent */
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+/* Input and dropdown styles */
+textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* General button styling */
+button {
+    padding: 5px 7px;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #e1d9d9; /* Nice blue color */
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #eee4e4;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Active button click effect */
+button:active {
+    background-color: #ebdddd;
+    transform: scale(0.98);
+}
+
+/* Styling for small buttons (e.g., Add Edge, Add Node) */
+.small-button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+/* Center the "Run Visualization" button below the graph */
+#run-visualization {
+    display: block;
+    margin: 20px auto;
+}
